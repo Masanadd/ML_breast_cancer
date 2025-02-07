@@ -11,7 +11,7 @@ El objetivo principal de este proyecto es crear un modelo de prediccion del **st
 
 ## Dataset
 
-- **Fuente**: Breast Cancer METABRIC
+- **Fuente**: La base de datos "The Molecular Taxonomy of Breast Cancer International Consortium (METABRIC)" es un proyecto Canadá-Reino Unido que contiene datos de secuenciación dirigida de 1,980 muestras primarias de cáncer de mama. Los datos clínicos y genómicos fueron descargados de cBioPortal.
 - **Variables clave**: Descripcion de las caracteristicas principales, como tamaño del tumor, textura, uniformidad celular, etc.
 - **Numero de muestras**: Total de casos en el conjunto de datos.
 - **Preprocesamiento**: Metodos aplicados (limpieza, normalizacion, eliminacion de valores atipicos, etc.).
