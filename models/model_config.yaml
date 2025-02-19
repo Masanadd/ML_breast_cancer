@@ -1,0 +1,40 @@
+best_parameters:
+  classifier__colsample_bytree: 0.8
+  classifier__learning_rate: 0.01
+  classifier__max_depth: 5
+  classifier__n_estimators: 200
+  classifier__subsample: 0.8
+features:
+- Relapse Free Status (Months)
+- Age at Diagnosis
+- Tumor Size
+- Mutation Count
+- Aggressive Treatment Score
+- Nottingham prognostic index
+- Lymph nodes examined positive
+- Type of Breast Surgery
+- Tumor Stage
+model: LGBMClassifier
+performance:
+  accuracy: 0.7505030181086519
+  f1_score: !!python/object/apply:numpy.core.multiarray.scalar
+  - &id001 !!python/object/apply:numpy.dtype
+    args:
+    - f8
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - -1
+    - -1
+    - 0
+  - !!binary |
+    oQ7qoA7q6D8=
+  roc_auc: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    xhIV/zjY5z8=
