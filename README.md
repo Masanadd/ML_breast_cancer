@@ -45,7 +45,66 @@ El objetivo principal de este proyecto es crear un modelo de prediccion del **st
 - **Overall Survival Status:** Estado de supervivencia general (si el paciente sigue vivo o ha fallecido).
 - **PR Status:** Estado del receptor de progesterona (positivo o negativo).
 - **Radio Therapy:** Indica si el paciente recibió radioterapia como parte del tratamiento.
-- **Relapse Free Status (Months):** Tiempo en meses en que el paciente permaneció libre de recaídas después del tratamiento inicial.
+- **Relapse Free Status (Months):** Tiempo en meses en que el paciente permaneció libre de recaídas después del tratamiento
+-
+-  ## Características del Proyecto
+- Comparación de modelos de clasificación supervisados y no supervisados.
+- Evaluación y selección del modelo con mejor desempeño.
+- Entrenamiento con los mejores hiperparámetros.
+- Interfaz desarrollada en Streamlit para facilitar su uso.
+- Análisis de variables clave como tamaño del tumor, conteo de mutaciones y tipo de cirugía.
+
+## Estructura del Proyecto
+```
+ML_Breast_Cancer/
+│── models/               # Modelos entrenados
+│   ├── final_model.pkl   # Mejor modelo identificado
+│── Notebooks/            # Análisis exploratorio y entrenamiento del modelo
+│   ├── 01_Fuentes.ipynb  # Obtención de datos
+│   ├── 02_Limpieza.ipynb # Preprocesamiento de datos
+│   ├── 03_Entrenamiento_Evaluación.ipynb # Entrenamiento y evaluación
+│── app.py                # Aplicación en Streamlit
+│── requirements.txt       # Dependencias necesarias
+│── README.md             # Documentación del proyecto
+```
+
+## Instalación y Uso
+
+### 1. Clonar el Repositorio
+```bash
+git clone https://github.com/tu-usuario/ML_Breast_Cancer.git
+cd ML_Breast_Cancer
+```
+
+### 2. Instalar Dependencias
+```bash
+pip install -r requirements.txt
+```
+
+### 3. Ejecutar la Aplicación
+```bash
+streamlit run app.py
+```
+
+## Entrada de Datos
+El modelo toma en cuenta las siguientes características clínicas:
+- Relapse Free Status (Months)
+- Age at Diagnosis
+- Tumor Size
+- Mutation Count
+- Aggressive Treatment Score
+- Nottingham Prognostic Index
+- Lymph nodes examined positive
+- Type of Breast Surgery
+- Tumor Stage
+
+## Resultados de Predicción
+La aplicación devuelve:
+- Probabilidad de Supervivencia (%)
+- Probabilidad de Fallecimiento (%)
+
+Los resultados se muestran gráficamente con barras de progreso para una mejor interpretación.
+ inicial.
 - **Relapse Free Status:** Indica si el paciente ha experimentado una recaída.
 - **Sex:** Sexo del paciente (masculino, femenino u otro).
 - **3-Gene classifier subtype:** Un subgrupo del cáncer basado en la expresión de tres genes específicos, utilizado para clasificar tumores.
